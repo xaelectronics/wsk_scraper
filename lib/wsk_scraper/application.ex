@@ -13,7 +13,7 @@ defmodule WskScraper.Application do
       # Start the endpoint when the application starts
       WskScraperWeb.Endpoint,
       WskScraper.Scraper.DailyFantasyFuel,
-      # WskScraper.Scraper.Numberfire
+      WskScraper.Scraper.Numberfire,
       # Starts a worker by calling: WskScraper.Worker.start_link(arg)
       # {WskScraper.Worker, arg},
     ]
