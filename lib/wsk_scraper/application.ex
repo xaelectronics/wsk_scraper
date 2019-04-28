@@ -11,7 +11,8 @@ defmodule WskScraper.Application do
       # Start the Ecto repository
       WskScraper.Repo,
       # Start the endpoint when the application starts
-      WskScraperWeb.Endpoint
+      WskScraperWeb.Endpoint,
+      WskScraper.Scraper.DailyFantasyFuel
       # Starts a worker by calling: WskScraper.Worker.start_link(arg)
       # {WskScraper.Worker, arg},
     ]

@@ -45,7 +45,8 @@ defmodule WskScraper.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:floki, "~> 0.21.0"},
       {:httpoison, "~> 1.5"},
-      {:timex, "~> 3.5"}
+      {:timex, "~> 3.5"},
+      {:exactor, "~> 2.2.4", warn_missing: false}
     ]
   end
 

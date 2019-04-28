@@ -17,6 +17,10 @@ defmodule WskScraperWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    # resources "/dff", DailyFantasyFuelController
+    get "/dff/:betting_site/:date", DailyFantasyFuelController, :index
+    get "/csv/dff/:betting_site/:date", DailyFantasyFuelController, :csv
+    get "/dff/initialize", DailyFantasyFuelController, :initialize
   end
 
   # Other scopes may use custom stacks.

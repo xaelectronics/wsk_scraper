@@ -1,0 +1,15 @@
+<%= for daily_fantasy_fuel <- @daily_fantasy_fuel do %>
+  <%= daily_fantasy_fuel.betting_site %>,
+  <%= daily_fantasy_fuel.date %>,
+  <%= daily_fantasy_fuel.name %>,
+  <%= daily_fantasy_fuel.position %>,
+  <%= daily_fantasy_fuel.days_rest %>,
+  <%= daily_fantasy_fuel.team %>,
+  <%= daily_fantasy_fuel.opp %>,
+  <%= daily_fantasy_fuel.projected_team_score %>,
+  <%= daily_fantasy_fuel.salary %>,
+  <%= daily_fantasy_fuel.integer %>,
+  <%= daily_fantasy_fuel.opp_rank %>,
+  <%= daily_fantasy_fuel.ppg_projected %>
+  <%= "\n" %>
+<% end %>

@@ -1,0 +1,48 @@
+<h1>Listing Daily fantasy fuel</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Betting site</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Days rest</th>
+      <th>Team</th>
+      <th>Opp</th>
+      <th>Projected team score</th>
+      <th>Salary</th>
+      <th>Integer</th>
+      <th>Opp rank</th>
+      <th>Ppg projected</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for daily_fantasy_fuel <- @daily_fantasy_fuel do %>
+    <tr>
+      <td><%= daily_fantasy_fuel.betting_site %></td>
+      <td><%= daily_fantasy_fuel.date %></td>
+      <td><%= daily_fantasy_fuel.name %></td>
+      <td><%= daily_fantasy_fuel.position %></td>
+      <td><%= daily_fantasy_fuel.days_rest %></td>
+      <td><%= daily_fantasy_fuel.team %></td>
+      <td><%= daily_fantasy_fuel.opp %></td>
+      <td><%= daily_fantasy_fuel.projected_team_score %></td>
+      <td><%= daily_fantasy_fuel.salary %></td>
+      <td><%= daily_fantasy_fuel.integer %></td>
+      <td><%= daily_fantasy_fuel.opp_rank %></td>
+      <td><%= daily_fantasy_fuel.ppg_projected %></td>
+
+      <td>
+        <%# link "Show", to: Routes.daily_fantasy_fuel_path(@conn, :show, daily_fantasy_fuel) %>
+        <%# link "Edit", to: Routes.daily_fantasy_fuel_path(@conn, :edit, daily_fantasy_fuel) %>
+        <%# link "Delete", to: Routes.daily_fantasy_fuel_path(@conn, :delete, daily_fantasy_fuel), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%# link "New Daily fantasy fuel", to: Routes.daily_fantasy_fuel_path(@conn, :new) %></span>
