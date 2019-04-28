@@ -18,6 +18,6 @@ defmodule WskScraperWeb.DailyFantasyFuelController do
   end
 
   def initialize(conn, _) do
-    WskScraper.Scraper.DailyFantasyFuel.scrape_all()
+    Task.start(fn() -> WskScraper.Scraper.DailyFantasyFuel.scrape_all() end)
   end
 end
