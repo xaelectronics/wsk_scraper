@@ -19,5 +19,6 @@ defmodule WskScraperWeb.DailyFantasyFuelController do
 
   def initialize(conn, _) do
     Task.start(fn() -> WskScraper.Scraper.DailyFantasyFuel.scrape_all() end)
+    conn |> send_resp(200, "2019 DFF sync started")
   end
 end
