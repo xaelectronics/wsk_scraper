@@ -7,7 +7,7 @@ defmodule WskScraper.Scraper.Numberfire do
   require Logger
   alias HTTPoison.Response
   alias CookieJar.HTTPoison, as: HTTPoison
-  use ExActor.GenServer, export: :wish_api
+  use ExActor.GenServer, export: :nf_scraper
   @refresh_interval 60 * 60 #one hour
   @timeout 60_000
   @platforms [%{site: "draftkings", value: 4}, %{site: "fanduel", value: 3}, %{site: "yahoo", value: 13}]

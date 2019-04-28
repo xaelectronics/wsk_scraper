@@ -4,7 +4,7 @@ defmodule WskScraper.Scraper.DailyFantasyFuel do
   """
   require Logger
   alias HTTPoison.Response
-  use ExActor.GenServer, export: :wish_api
+  use ExActor.GenServer, export: :dff_scraper
   @refresh_interval 60 * 60 #one hour
   @timeout 60_000
 
