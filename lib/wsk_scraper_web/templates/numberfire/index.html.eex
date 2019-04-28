@@ -1,0 +1,64 @@
+<h1>Listing Numberfire</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Betting site</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Opp</th>
+      <th>Projected fp</th>
+      <th>Salary</th>
+      <th>Value</th>
+      <th>Pa</th>
+      <th>Bb</th>
+      <th>1b</th>
+      <th>2b</th>
+      <th>3b</th>
+      <th>Hr</th>
+      <th>R</th>
+      <th>Rbi</th>
+      <th>Sb</th>
+      <th>K</th>
+      <th>Avg</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for numberfire <- @numberfire do %>
+    <tr>
+      <td><%= numberfire.betting_site %></td>
+      <td><%= numberfire.date %></td>
+      <td><%= numberfire.name %></td>
+      <td><%= numberfire.position %></td>
+      <td><%= numberfire.team %></td>
+      <td><%= numberfire.opp %></td>
+      <td><%= numberfire.projected_fp %></td>
+      <td><%= numberfire.salary %></td>
+      <td><%= numberfire.value %></td>
+      <td><%= numberfire.pa %></td>
+      <td><%= numberfire.bb %></td>
+      <td><%= Map.get(numberfire, :"1b") %></td>
+      <td><%= Map.get(numberfire, :"2b") %></td>
+      <td><%= Map.get(numberfire, :"3b") %></td>
+      <td><%= numberfire.hr %></td>
+      <td><%= numberfire.r %></td>
+      <td><%= numberfire.rbi %></td>
+      <td><%= numberfire.sb %></td>
+      <td><%= numberfire.k %></td>
+      <td><%= numberfire.avg %></td>
+
+      <td>
+        <%# link "Show", to: Routes.numberfire_path(@conn, :show, numberfire) %>
+        <%# link "Edit", to: Routes.numberfire_path(@conn, :edit, numberfire) %>
+        <%# link "Delete", to: Routes.numberfire_path(@conn, :delete, numberfire), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%# link "New Numberfire", to: Routes.numberfire_path(@conn, :new) %></span>

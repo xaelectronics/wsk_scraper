@@ -46,7 +46,8 @@ defmodule WskScraper.MixProject do
       {:floki, "~> 0.21.0"},
       {:httpoison, "~> 1.5"},
       {:timex, "~> 3.5"},
-      {:exactor, "~> 2.2.4", warn_missing: false}
+      {:exactor, "~> 2.2.4", warn_missing: false},
+      {:cookie_jar, "~> 1.0"}
     ]
   end
 

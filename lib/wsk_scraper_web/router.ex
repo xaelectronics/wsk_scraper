@@ -21,6 +21,9 @@ defmodule WskScraperWeb.Router do
     get "/dff/:betting_site/:date", DailyFantasyFuelController, :index
     get "/csv/dff/:betting_site/:date", DailyFantasyFuelController, :csv
     get "/dff/initialize", DailyFantasyFuelController, :initialize
+
+    get "/nf/:betting_site/:date", NumberfireController, :index
+    get "/csv/nf/:betting_site/:date", NumberfireController, :csv
   end
 
   # Other scopes may use custom stacks.

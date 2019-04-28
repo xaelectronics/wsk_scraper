@@ -108,4 +108,108 @@ defmodule WskScraper.Sources do
   def change_daily_fantasy_fuel(%DailyFantasyFuel{} = daily_fantasy_fuel) do
     DailyFantasyFuel.changeset(daily_fantasy_fuel, %{})
   end
+
+  alias WskScraper.Sources.Numberfire
+
+  @doc """
+  Returns the list of numberfire.
+
+  ## Examples
+
+      iex> list_numberfire()
+      [%Numberfire{}, ...]
+
+  """
+  def list_numberfire do
+    Repo.all(Numberfire)
+  end
+
+  def list_numberfire(site, date) do
+    Numberfire
+    |> where([nf], nf.betting_site == ^site)
+    |> where([nf], nf.date == ^date)
+    |> Repo.all()
+  end
+
+
+  @doc """
+  Gets a single numberfire.
+
+  Raises `Ecto.NoResultsError` if the Numberfire does not exist.
+
+  ## Examples
+
+      iex> get_numberfire!(123)
+      %Numberfire{}
+
+      iex> get_numberfire!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_numberfire!(id), do: Repo.get!(Numberfire, id)
+
+  @doc """
+  Creates a numberfire.
+
+  ## Examples
+
+      iex> create_numberfire(%{field: value})
+      {:ok, %Numberfire{}}
+
+      iex> create_numberfire(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_numberfire(attrs \\ %{}) do
+    %Numberfire{}
+    |> Numberfire.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a numberfire.
+
+  ## Examples
+
+      iex> update_numberfire(numberfire, %{field: new_value})
+      {:ok, %Numberfire{}}
+
+      iex> update_numberfire(numberfire, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_numberfire(%Numberfire{} = numberfire, attrs) do
+    numberfire
+    |> Numberfire.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a Numberfire.
+
+  ## Examples
+
+      iex> delete_numberfire(numberfire)
+      {:ok, %Numberfire{}}
+
+      iex> delete_numberfire(numberfire)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_numberfire(%Numberfire{} = numberfire) do
+    Repo.delete(numberfire)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking numberfire changes.
+
+  ## Examples
+
+      iex> change_numberfire(numberfire)
+      %Ecto.Changeset{source: %Numberfire{}}
+
+  """
+  def change_numberfire(%Numberfire{} = numberfire) do
+    Numberfire.changeset(numberfire, %{})
+  end
 end

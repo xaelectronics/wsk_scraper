@@ -12,7 +12,6 @@ defmodule WskScraper.Repo.Migrations.CreateDailyFantasyFuel do
       add :opp, :string
       add :projected_team_score, :float
       add :salary, :string
-      add :integer, :string
       add :opp_rank, :float
       add :ppg_projected, :float
 

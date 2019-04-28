@@ -12,7 +12,6 @@
       <th>Opp</th>
       <th>Projected team score</th>
       <th>Salary</th>
-      <th>Integer</th>
       <th>Opp rank</th>
       <th>Ppg projected</th>
 
@@ -31,7 +30,6 @@
       <td><%= daily_fantasy_fuel.opp %></td>
       <td><%= daily_fantasy_fuel.projected_team_score %></td>
       <td><%= daily_fantasy_fuel.salary %></td>
-      <td><%= daily_fantasy_fuel.integer %></td>
       <td><%= daily_fantasy_fuel.opp_rank %></td>
       <td><%= daily_fantasy_fuel.ppg_projected %></td>
 

@@ -12,9 +12,9 @@ defmodule WskScraperWeb.DailyFantasyFuelController do
   def csv(conn, %{"betting_site" => site, "date" => date}) do
     daily_fantasy_fuel = Sources.list_daily_fantasy_fuel(site, date)
     build_csv = daily_fantasy_fuel
-    |> Enum.map(fn(row) -> "#{row.betting_site}, #{row.date}, \"#{row.name}\", #{row.position}, #{row.days_rest}, #{row.team}, #{row.opp}, #{row.projected_team_score}, #{row.salary}, #{row.integer}, #{row.opp_rank}, #{row.ppg_projected}" end)
+    |> Enum.map(fn(row) -> "#{row.betting_site}, #{row.date}, \"#{row.name}\", #{row.position}, #{row.days_rest}, #{row.team}, #{row.opp}, #{row.projected_team_score}, #{row.salary}, #{row.opp_rank}, #{row.ppg_projected}" end)
     |> Enum.join("\n")
-    conn |> send_resp(201, "betting_site, date, name, position, days_rest, team, opp, projected_team_score, salary, integer, opp_rank, ppg_projected\n#{build_csv}")
+    conn |> send_resp(201, "betting_site, date, name, position, days_rest, team, opp, projected_team_score, salary, opp_rank, ppg_projected\n#{build_csv}")
   end
 
   def initialize(conn, _) do

@@ -6,7 +6,6 @@ defmodule WskScraper.Sources.DailyFantasyFuel do
     field :betting_site, :string
     field :date, :date
     field :days_rest, :integer
-    field :integer, :string
     field :name, :string
     field :opp, :string
     field :opp_rank, :float
@@ -20,7 +19,7 @@ defmodule WskScraper.Sources.DailyFantasyFuel do
   end
 
   @attrs [
-    :betting_site, :date, :name, :position, :days_rest, :team, :opp, :projected_team_score, :salary, :integer, :opp_rank, :ppg_projected
+    :betting_site, :date, :name, :position, :days_rest, :team, :opp, :projected_team_score, :salary, :opp_rank, :ppg_projected
   ]
   @required_attrs [
 

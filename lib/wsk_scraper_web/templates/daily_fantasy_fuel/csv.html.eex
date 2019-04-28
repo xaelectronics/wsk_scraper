@@ -8,7 +8,6 @@
   <%= daily_fantasy_fuel.opp %>,
   <%= daily_fantasy_fuel.projected_team_score %>,
   <%= daily_fantasy_fuel.salary %>,
-  <%= daily_fantasy_fuel.integer %>,
   <%= daily_fantasy_fuel.opp_rank %>,
   <%= daily_fantasy_fuel.ppg_projected %>
   <%= "\n" %>

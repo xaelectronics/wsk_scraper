@@ -10,8 +10,10 @@ defmodule WskScraper.Scraper.DailyFantasyFuel do
 
   defstart start_link(_) do
     schedule_refresh()
-    scrape("draftkings")
-    scrape("fanduel")
+    Task.start(fn() ->
+      scrape("draftkings")
+      scrape("fanduel")
+    end)
     initial_state(nil)
   end
 
